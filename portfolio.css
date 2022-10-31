@@ -22,7 +22,7 @@ body:active {
     top: 0px;
     position: fixed;
     left: 0px;
-    line-height: 2.5;
+    line-height: 3;
     height: auto;
     display: block;
     z-index: 2;
@@ -68,36 +68,40 @@ body #nav .noclick {
     background-color: rgb(255, 203, 234);
     position: fixed;
     width: 100%;
-    height: 35%;
-    top: 5%;
+    height: 45%;
 }
 .job h1 {
     position: relative;
     left: 12%;
-    top: 40%;
+    top: 60%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:rgb(94, 42, 0)
 }
 .job h1:hover {
-    top: 39%;
+    top: 58%;
 }
 .job h1:active {
     color: rgb(255, 170, 0);
 }
 .photo {
-    background-color: '';
+    background-image: url(facepic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     grid-column: 8 / span 3;
-    grid-row: 3 / span 4;
+    grid-row: 3 / span 5;
     z-index: 2;
     margin: 0;
     position: relative;
-    bottom: 30px;
 }
 .photo:hover {
-    bottom: 32px;
+    bottom: 3px;
 }
-.photo img:active {
+.photo:active {
     box-shadow: rgb(255, 203, 234) 0px 0px 15px 5px;
+}
+figcaption {
+    padding-left: 5px;
+    padding-top: 5px;
 }
 #location {
     font-size: 10px; 
@@ -110,7 +114,6 @@ body #nav .noclick {
     grid-column: 2 / span 5;
     grid-row: 5 / span 2;
     border-radius: 90px;
-    text-align: center;
     z-index: 1;
     padding: 10px;
     box-shadow: rgba(255, 203, 234, 0.773) 0px 0px 50px 30px inset;
@@ -121,6 +124,8 @@ body #nav .noclick {
     position: relative;
     visibility: hidden;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    height: auto;
 }
 .interact-1:hover {
     bottom: 2px;
@@ -187,10 +192,9 @@ body #nav .noclick {
     box-sizing: border-box;
     border: 10px rgb(94, 42, 0) solid;
     border-bottom: none;
+    text-align: center;
 }
 #contact-section img {
-    top: 30%;
-    left: 35%;
     position: relative;
     padding: 25px;
     z-index: 2;
@@ -211,4 +215,13 @@ body #nav .noclick {
     position: absolute;
     top: 60%;
     left: 78%;
+}
+
+
+            /* Media Queries */
+
+@media only screen and (max-width: 500px) {
+    .language h2, .language img {
+        display: block;
+    }
 }

@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="portfolio.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1;"/>
 </head>
 <title>Deondre's Portfolio</title>
 <body>
@@ -15,12 +16,11 @@
             ABOUT ME</a>
     </div>
     <div class="job"><h1 onclick="document.getElementById('interact').style.visibility = 'hidden';">Full-Stack Web Developer<br/><p style="font-size: 10px; color: rgb(255, 238, 203); margin-top: -10px;">(In Training...)</p></h1></div>
-    <div class="photo"><figure><img width="100%"
-         onmouseenter="document.getElementById('location').style.visibility = 'visible'";
-         onmouseleave="document.getElementById('location').style.visibility = 'hidden';";
-        src="facepic.jpg"/>
+    <div class="photo"
+         onmousedown="document.getElementById('location').style.visibility = 'visible'";
+         onmouseup="document.getElementById('location').style.visibility = 'hidden';";>
         <figcaption id="location">24 Male<br/>
-        based in Markham, Ontario</figcaption></figure></div>
+        based in Markham, Ontario</figcaption></div>
    <div class="interact-1" id="interact" onclick="document.getElementById('interact').style.visibility = 'hidden';">
     <p><strong>Hi I'm Deondre! I'm an aspiring programmer currently working in the Toronto/Markham area. I discovered my 
         love for coding in highschool but in my free time I also enjoy exercising and cooking new recipes. 
