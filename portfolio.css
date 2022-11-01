@@ -2,7 +2,8 @@ body {
     background-color: rgba(255, 238, 203, 0.214);
     margin: 0px;
     padding: 0px;
-   cursor: grab; 
+    cursor: grab; 
+    overflow-y: hidden;
 }
 body:active {
     cursor: grabbing;
@@ -27,6 +28,7 @@ body:active {
     display: block;
     z-index: 2;
     color: white;
+    border-bottom: 5px solid rgb(118, 53, 0);
 }
 #nav a {
     padding: 10px 5px 0px 5px;
@@ -98,9 +100,9 @@ body #nav .noclick {
 .photo:hover {
     bottom: 3px;
 }
-.photo:active {
+/* .photo:active {
     box-shadow: rgb(255, 203, 234) 0px 0px 15px 5px;
-}
+} */
 figcaption {
     padding-left: 5px;
     padding-top: 5px;
@@ -143,13 +145,14 @@ figcaption {
 }
 .language {
     background-color: '';
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     left: 0px;
     width: 100%;
-    max-height: 150px;
-    padding-bottom: 10px;
+    max-height: 15%;
     text-align: center;
+    display: block;
+    overflow: hidden;
 }
 .language h2{
     position: sticky;
@@ -165,8 +168,8 @@ figcaption {
 .language img{
     margin-right: 10px;
     margin-left: 10px;
-    display: inline-block;
-    position: sticky;
+    display: inline;
+    position: relative;
     left: 10px;
     max-width: 60px;
     max-height: 60px;
@@ -185,7 +188,7 @@ figcaption {
 .email {
     grid-column: 5 / span 4;
     grid-row: 1 / span 9;
-    background-color: rgba(141, 63, 0);
+    background-color: rgb(145, 217, 255);
 }
 .instagram {
     grid-column: 9 / span 4;
@@ -194,7 +197,7 @@ figcaption {
 }
 #contact-section {
     box-sizing: border-box;
-    border: 10px rgb(94, 42, 0) solid;
+    /* border: 10px rgb(94, 42, 0) solid; */
     border-bottom: none;
     text-align: center;
 }
@@ -225,9 +228,13 @@ figcaption {
 
             /* Media Queries */
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 500px) {
+    .job {
+        text-align: center;
+    }
     .job h1 {
         font-size: 25px;
+        left: 2%;
     }
     .language h2 {
         visibility: hidden;
@@ -249,4 +256,38 @@ figcaption {
     body #nav #interact-button {
         visibility: hidden;
     }
+    .language {
+        padding-bottom: 25%;
+    }
+    #contact-section {
+        border: 0px;
+    }
+}
+@media only screen and (min-width: 501px) and (max-width: 1200px) {
+    .job h1 {
+            font-size: 25px;
+        }
+        .language h2 {
+            visibility: hidden;
+        }
+        .photo {
+            grid-column: 4 / span 6;
+            grid-row: 4 / span 4;
+        }
+        #nav h2 {
+            display: block;
+            line-height: 0.5;
+        }
+        #nav a {
+            left: 5%;
+        }
+        .interact-1 {
+            visibility: hidden;
+        }
+        body #nav #interact-button {
+            visibility: hidden;
+        }
+        .language {
+            visibility: hidden;
+        }
 }
