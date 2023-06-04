@@ -12,22 +12,28 @@
         <a class="current-page" href="index.html">HOME</a>
 
         <a href="contact.html">CONTACT</a>
-        <a id="interact-button" href="#" onclick="document.getElementById('interact').style.visibility = 'visible';">
+        <a id="interact-button" href="#" onclick="document.getElementById('interact').classList.toggle('fade')">
             ABOUT ME</a>
     </div>
-    <div class="job"><h1 onclick="document.getElementById('interact').style.visibility = 'hidden';">Full-Stack Web Developer<br/><p style="font-size: 10px; color: rgb(255, 238, 203); margin-top: -10px;">(In Training...)</p></h1></div>
-    <div class="photo"
-         onmousedown="document.getElementById('location').style.visibility = 'visible'";
-         onmouseup="document.getElementById('location').style.visibility = 'hidden';";>
-        <figcaption id="location">24 Male<br/>
-        based in Markham, Ontario</figcaption></div>
-   <div class="interact-1" id="interact" onclick="document.getElementById('interact').style.visibility = 'hidden';">
-    <p><strong>Hi I'm Deondre! I'm an aspiring programmer currently working in the Toronto/Markham area. I discovered my 
-        love for coding in highschool but in my free time I also enjoy exercising and cooking new recipes. 
-        Dog person. Cat person. Ferret person. <br/><br/> Please select 
+    <div class="job"><h1 onclick="document.getElementById('interact').style.visibility = 'hidden';">Full-Stack Web Developer<br/><p style="font-size: 10px; color: rgb(255, 238, 203); margin-top: -10px;">Toronto, Ontario</p></h1></div>
+    <div class="photo">
+        <img src="./facepic.jpg" id="selfie" height="50%" width="20%"/>
+        </div>
+   <div class="interact-1" id="interact" onclick="document.getElementById('interact').style.visibility = 'hidden' ;">
+    <p><strong>Hi my name is Deondre and I'm a passionate Web Developer based in Toronto, Ontario. When I'm not working,
+        I also enjoy exercising and cooking new recipes. 
+        <br/><br/> Please select 
         <a href="contact.html"><b style="color: brown;">CONTACT</b></a>
         as a quick and easy means to get in touch with me.<br/>Thank you!</strong></p></div> 
-    <div class="language"><h2>Skilled in the following languages and programs:</h2>
+
+    <div id="projects">
+        wtf
+        <h2>
+            My Projects
+        </h2>
+    </div>
+
+    <div class="language"><h2>Tech Stack:</h2>
         <img src="logos\file.png" title="HTML"/>
         <img src="logos\code.png" title="CSS"/>
         <img src="logos\javascript.png" title="Javascript"/>

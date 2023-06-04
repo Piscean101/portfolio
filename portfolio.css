@@ -2,8 +2,10 @@ body {
     background-color: rgba(255, 238, 203, 0.214);
     margin: 0px;
     padding: 0px;
-    cursor: grab; 
-    overflow-y: hidden;
+    padding-bottom: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-width: 99vw;
 }
 body:active {
     cursor: grabbing;
@@ -68,9 +70,10 @@ body #nav .noclick {
 
 .job {
     background-color: rgb(255, 203, 234);
-    position: fixed;
-    width: 100%;
+    position: absolute;
+    width: 100vw;
     height: 40%;
+    right: 0;
 }
 .job h1 {
     position: relative;
@@ -85,20 +88,10 @@ body #nav .noclick {
 .job h1:active {
     color: rgb(255, 170, 0);
 }
-.photo {
-    background-image: url(facepic.jpg); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
-    grid-column: 8 / span 3;
-    grid-row: 3 / span 5;
-    z-index: 2;
-    margin: 0;
-    position: relative;
-}
-.photo:hover {
-    bottom: 3px;
+#selfie {
+    right: 5%;
+    top: 35%;
+    position: absolute;
 }
 /* .photo:active {
     box-shadow: rgb(255, 203, 234) 0px 0px 15px 5px;
@@ -113,35 +106,46 @@ figcaption {
     line-height: 1.1;
     visibility: hidden;
 }
+#interact {
+    visibility: hidden;
+}
+#interact.fade {
+    animation: fade 2500ms forwards;
+}
 .interact-1 {
     background-color: '';
-    grid-column: 2 / span 5;
-    grid-row: 5 / span 2;
-    border-radius: 90px;
+    position: absolute;
+    top: 70%;
     z-index: 1;
     padding: 10px;
     box-shadow: rgba(255, 203, 234, 0.773) 0px 0px 50px 30px inset;
-    border: 1px solid rgb(255, 203, 234);
-    font-size: 12px;
+    border: 2px solid rgb(255, 203, 234);
+    border-bottom: none;
+    font-size: 30px;
     margin: 15px;
     left: 25px;
     position: relative;
-    visibility: hidden;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    width: auto;
+    width: 350%;
     height: auto;
+    padding: 20px;
+    border-radius: 5px;
 }
 .interact-1:hover {
     bottom: 2px;
 }
-.interact-1:active {
-    box-shadow: none;
-    background-color: rgb(255, 203, 234);
-    color: whitesmoke;
-}
 .interact-1 a{
     text-decoration-line: none;
+}
+#projects {
+    z-index: 7;
+    background-color: rgb(105, 47, 0);
+    color: white;
+    position: absolute;
+    top: 150%;
+    width: 100%;
+    height: 50%;
 }
 .language {
     background-color: '';
@@ -153,6 +157,7 @@ figcaption {
     text-align: center;
     display: block;
     overflow: hidden;
+    visibility: hidden;
 }
 .language h2{
     position: sticky;
@@ -178,48 +183,50 @@ figcaption {
     top: 20%;
 }
 
+
             /* Contact Page */
 
-.linkedin {
+
+#linkedin {
     grid-column: 1 / span 4;
     grid-row: 1 / span 9;
     background-color: rgba(255, 170, 0);
 }
-.email {
+#email {
     grid-column: 5 / span 4;
     grid-row: 1 / span 9;
     background-color: rgb(145, 217, 255);
 }
-.instagram {
+#instagram {
     grid-column: 9 / span 4;
     grid-row: 1 / span 9;
     background-color:rgba(255, 203, 234, 0.421);
 }
-#contact-section {
+.contact-section {
     box-sizing: border-box;
     /* border: 10px rgb(94, 42, 0) solid; */
     border-bottom: none;
     text-align: center;
 }
-#contact-section img {
+.contact-section img {
     position: relative;
     padding: 25px;
     z-index: 2;
     top: 40%;
 }
-#contact-section img:hover {
+.contact-section img:hover {
     box-shadow: 0px 0px 5px 5px white;
 }
-#contact-section img:active {
+.contact-section img:active {
     box-shadow: 0px 0px 5px 5px black inset;
 }
-.linkedin img:active {
+#linkedin img:active {
     background-color:rgb(172, 115, 0);
 }
-.email img:active {
+#email img:active {
     background-color:rgb(105, 47, 0)
 }
-#contact-section h1 {
+.contact-section h1 {
     position: absolute;
     top: 70%;
     left: 77%;
@@ -290,4 +297,14 @@ figcaption {
         .language {
             visibility: hidden;
         }
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+        opacity: 100%;
+    }
 }
