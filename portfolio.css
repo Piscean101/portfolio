@@ -28,7 +28,7 @@ body:active {
     line-height: 3;
     height: auto;
     display: block;
-    z-index: 2;
+    z-index: 10;
     color: white;
     border-bottom: 5px solid rgb(118, 53, 0);
 }
@@ -82,29 +82,19 @@ body #nav .noclick {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:rgb(94, 42, 0)
 }
-.job h1:hover {
-    top: 58%;
-}
-.job h1:active {
-    color: rgb(255, 170, 0);
-}
 #selfie {
     right: 5%;
     top: 35%;
     position: absolute;
-}
-/* .photo:active {
-    box-shadow: rgb(255, 203, 234) 0px 0px 15px 5px;
-} */
-figcaption {
-    padding-left: 5px;
-    padding-top: 5px;
 }
 #location {
     font-size: 10px; 
     color:rgb(94, 42, 0); 
     line-height: 1.1;
     visibility: hidden;
+}
+#interact-button {
+    scroll-behavior: smooth;
 }
 #interact {
     visibility: hidden;
@@ -115,38 +105,29 @@ figcaption {
 .interact-1 {
     background-color: '';
     position: absolute;
-    top: 70%;
+    top: 100%;
     z-index: 1;
     padding: 10px;
-    box-shadow: rgba(255, 203, 234, 0.773) 0px 0px 50px 30px inset;
+    box-shadow: rgba(255, 203, 234, 0.773) 0px 0px 80px 35px inset;
     border: 2px solid rgb(255, 203, 234);
     border-bottom: none;
-    font-size: 30px;
+    font-size: 25px;
     margin: 15px;
-    left: 25px;
+    left: 10px;
     position: relative;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    width: 350%;
+    width: 500%;
     height: auto;
     padding: 20px;
     border-radius: 5px;
-}
-.interact-1:hover {
-    bottom: 2px;
+    display: flex;
 }
 .interact-1 a{
     text-decoration-line: none;
+    color: brown;
 }
-#projects {
-    z-index: 7;
-    background-color: rgb(105, 47, 0);
-    color: white;
-    position: absolute;
-    top: 150%;
-    width: 100%;
-    height: 50%;
-}
+
 .language {
     background-color: '';
     position: absolute;
@@ -182,6 +163,73 @@ figcaption {
 .language img:hover{
     top: 20%;
 }
+
+            /* Home Page : Projects */
+
+.p-photo {
+    border: 2px solid white;
+}
+.photo-project {
+    position: relative;
+    margin: 50px;
+    padding: none;
+    box-sizing: border-box;
+}
+#projects {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    z-index: 2;
+    padding: 50px;
+}
+#project-wrap {
+    z-index: 2;
+    background-color:'';
+    color: white;
+    position: absolute;
+    top: 150%;
+    width: 100%;
+    height: 150%;
+}
+#projects::after {
+    content: '';
+    background-color:rgb(105, 47, 0);
+    z-index: -1;
+    inset: 0;
+    transform: skewY(5deg);
+    position: absolute;
+}
+#image-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.p-overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 3;
+    inset: 0;
+    height: 400px;
+    position: absolute;
+    cursor: pointer;
+}
+.p-overlay:hover{
+    display: none;
+}
+.name {
+    z-index: 10;
+    border: 2px solid orange;
+    text-align: center;
+    position: relative;
+    top: 100%;
+}
+.p-photo {
+    height: 400px;
+    width: 550px;
+}
+
+
+
 
 
             /* Contact Page */
@@ -234,6 +282,12 @@ figcaption {
 
 
             /* Media Queries */
+@media only screen and (max-width: 1300px) {
+    .interact-1 {
+        top: 110%;
+        width: 200%;
+    }
+}
 
 @media only screen and (max-width: 500px) {
     .job {
@@ -258,16 +312,18 @@ figcaption {
         left: 5%;
     }
     .interact-1 {
+        top: 250%;
         visibility: hidden;
-    }
-    body #nav #interact-button {
-        visibility: hidden;
+        font-size: 90%;
     }
     .language {
         padding-bottom: 25%;
     }
     #contact-section {
         border: 0px;
+    }
+    #selfie {
+        width: 60%;
     }
 }
 @media only screen and (min-width: 501px) and (max-width: 1200px) {
@@ -291,11 +347,11 @@ figcaption {
         .interact-1 {
             visibility: hidden;
         }
-        body #nav #interact-button {
-            visibility: hidden;
-        }
         .language {
             visibility: hidden;
+        }
+        #selfie {
+            width: 40%;
         }
 }
 @keyframes fade {

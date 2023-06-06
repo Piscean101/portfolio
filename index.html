@@ -2,7 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="portfolio.css"/>
-    <meta name="viewport" content="width=device-width"/>
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" maximum-scale="1.0"/>
 </head>
 <title>Deondre's Portfolio</title>
 <body>
@@ -12,7 +12,8 @@
         <a class="current-page" href="index.html">HOME</a>
 
         <a href="contact.html">CONTACT</a>
-        <a id="interact-button" href="#" onclick="document.getElementById('interact').classList.toggle('fade')">
+        <a id="interact-button" href="#"
+            onclick="document.getElementById('interact').classList.toggle('fade')">
             ABOUT ME</a>
     </div>
     <div class="job"><h1 onclick="document.getElementById('interact').style.visibility = 'hidden';">Full-Stack Web Developer<br/><p style="font-size: 10px; color: rgb(255, 238, 203); margin-top: -10px;">Toronto, Ontario</p></h1></div>
@@ -23,23 +24,45 @@
     <p><strong>Hi my name is Deondre and I'm a passionate Web Developer based in Toronto, Ontario. When I'm not working,
         I also enjoy exercising and cooking new recipes. 
         <br/><br/> Please select 
-        <a href="contact.html"><b style="color: brown;">CONTACT</b></a>
+        <a href="contact.html"><b>CONTACT</b></a>
         as a quick and easy means to get in touch with me.<br/>Thank you!</strong></p></div> 
-
+    <div id="project-wrap">
     <div id="projects">
-        wtf
         <h2>
             My Projects
         </h2>
-    </div>
+        <div id="image-wrap">
+            <span id="project1" class="photo-project">
 
-    <div class="language"><h2>Tech Stack:</h2>
+        <div class="p-overlay"><p class="name">Random Name Generator</p></div>
+        <a href="https://piscean101.github.io/randomnamegenerator/" target="_blank"><img src="./logos/rngphoto.png" id="rngphoto" class="p-photo"></a>
+        
+            </span>
+
+            <span id="project2" class="photo-project">
+                <div class="p-overlay"><p class="name">Pokedex (Palmerdex)</p></div>
+                <a href="https://piscean101.github.io/palmerdex/" target="_blank"><img src="./logos/pmdphoto.png" id="pmdphoto" class="p-photo"/></a>
+                    </span>
+
+                    <span id="project3" class="photo-project">
+                        <div class="p-overlay"><p class="name">Online Shop</p></div>
+                        <img src="./logos/reactshoppphoto.png"  id="rsphoto" class="p-photo"/>
+                            </span>
+
+                            <span id="project4" class="photo-project">
+                                <div class="p-overlay"><p class="name">New Magic (Minigame + Online Shop)</p></div>
+                                <img src="./logos/newmagicphoto.png"  id="nmphoto" class="p-photo"/>
+                                    </span>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="language"><h2>Tech Stack:</h2>
         <img src="logos\file.png" title="HTML"/>
         <img src="logos\code.png" title="CSS"/>
         <img src="logos\javascript.png" title="Javascript"/>
         <img src="logos\visual-studio-code.png" title="Visual Studio Code"/>
         <img src="logos\git.png" title="Git/Git-Bash"/>
-    </div>
+    </div> -->
     </div>
 </body>
 </html>
