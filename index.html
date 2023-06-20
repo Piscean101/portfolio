@@ -13,7 +13,7 @@
 
         <a href="contact.html">CONTACT</a>
         <a id="interact-button" href="#"
-            onclick="document.getElementById('interact').classList.toggle('fade')">
+            onclick="document.getElementById('interact').classList.add('fade'); document.getElementById('interact-button').classList.add('current-page')">
             ABOUT ME</a>
     </div>
     <div class="job"><h1 onclick="document.getElementById('interact').style.visibility = 'hidden';">Full-Stack Web Developer<br/><p style="font-size: 10px; color: rgb(255, 238, 203); margin-top: -10px;">Toronto, Ontario</p></h1></div>
@@ -21,7 +21,7 @@
         <img src="./facepic.jpg" id="selfie" height="50%" width="20%"/>
         </div>
    <div class="interact-1" id="interact" onclick="document.getElementById('interact').style.visibility = 'hidden' ;">
-    <p><strong>Hi my name is Deondre and I'm a passionate Web Developer based in Toronto, Ontario. When I'm not working,
+    <p><strong>Hi, my name is Deondre and I'm a passionate Web Developer based in Toronto, Ontario. When I'm not working,
         I also enjoy exercising and cooking new recipes. 
         <br/><br/> Please select 
         <a href="contact.html"><b>CONTACT</b></a>
@@ -34,29 +34,29 @@
         <div id="image-wrap">
             <span id="project1" class="photo-project">
 
-        <div class="p-overlay"><p class="name">Random Name Generator</p></div>
-        <a href="https://piscean101.github.io/randomnamegenerator/" target="_blank"><img src="./logos/rngphoto.png" id="rngphoto" class="p-photo"></a>
+        <div class="p-overlay"><p class="name">"BasicData" Enterprise Page</p></div>
+        <a href="https://piscean101.github.io/basicdata/" target="_blank"><img src="./logos/basicdataphoto.png" id="bsdphoto" class="p-photo"></a>
         
             </span>
 
             <span id="project2" class="photo-project">
-                <div class="p-overlay"><p class="name">Palmerdex (Pokedex)</p></div>
+                <div class="p-overlay"><p class="name">Online Shop <i>(Server Down)</i></p></div>
+                <img src="./logos/reactshoppphoto.png"  id="rsphoto" class="p-photo"/>
+                    </span>
+
+            <span id="project3" class="photo-project">
+                <div class="p-overlay"><p class="name">"Palmerdex" Pokedex</p></div>
                 <a href="https://piscean101.github.io/palmerdex/" target="_blank"><img src="./logos/pmdphoto.png" id="pmdphoto" class="p-photo"/></a>
                     </span>
 
-                    <span id="project3" class="photo-project">
-                        <div class="p-overlay"><p class="name">Online Shop</p></div>
-                        <img src="./logos/reactshoppphoto.png"  id="rsphoto" class="p-photo"/>
-                            </span>
-
                             <span id="project4" class="photo-project">
-                                <div class="p-overlay"><p class="name">New Magic (Minigame + Online Shop)</p></div>
+                                <div class="p-overlay"><p class="name">Minigame + Online Shop <i>(Server Down)</i></p></div>
                                 <img src="./logos/newmagicphoto.png"  id="nmphoto" class="p-photo"/>
                                     </span>
         </div>
     </div>
     </div>
-     <div class="language"><h2>Tech Stack:</h2>
+     <div class="language"><h2>Tech Stack </h2>
         <img src="logos\file.png" title="HTML"/>
         <img src="logos\code.png" title="CSS"/>
         <img src="logos\javascript.png" title="Javascript"/>
