@@ -5,6 +5,8 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     max-width: 99vw;
+    position: absolute;
+    height: 100%;
 }
 body:active {
     cursor: grabbing;
@@ -97,6 +99,7 @@ body #nav .noclick {
 }
 #interact {
     visibility: hidden;
+    z-index: 5;
 }
 #interact.fade {
     animation: fade 2500ms forwards;
@@ -104,19 +107,16 @@ body #nav .noclick {
 .interact-1 {
     background-color: '';
     position: absolute;
-    top: 100%;
+    bottom: 100px;
     z-index: 1;
     padding: 10px;
     box-shadow: rgba(255, 203, 234, 0.773) 0px 0px 80px 35px inset;
     border: 2px solid rgb(255, 203, 234);
-    border-bottom: none;
     font-size: 25px;
     margin: 15px;
-    left: 10px;
     position: relative;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    width: 500%;
     height: auto;
     padding: 20px;
     border-radius: 5px;
@@ -130,13 +130,13 @@ body #nav .noclick {
 .language {
     background-color: '';
     position: absolute;
-    bottom: -2000px;
     left: 0px;
     right: 0px;
     max-height: 15%;
     text-align: center;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
     padding: 10px;
@@ -175,7 +175,7 @@ body #nav .noclick {
 }
 .photo-project {
     position: relative;
-    margin: 50px;
+    margin: 2px;
     padding: none;
     box-sizing: border-box;
 }
@@ -197,7 +197,7 @@ body #nav .noclick {
     height: 150%;
 }
 .p-overlay p {
-    color: rgb(128, 128, 0);
+    color: rgb(255, 255, 0);
 }
 #projects::after {
     content: '';
@@ -210,10 +210,13 @@ body #nav .noclick {
 #image-wrap {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-evenly;
+    overflow: hidden;
 }
 .p-overlay {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.80);
+    transition: height 1s , background-color 0.5s;
     z-index: 3;
     border-radius: 15px;
     inset: 0;
@@ -221,15 +224,21 @@ body #nav .noclick {
     position: absolute;
     cursor: pointer;
 }
-.p-overlay:hover{
-    display: none;
+#p-overlay-1:hover, #p-overlay-3:hover{
+    background-color: rgb(0, 0, 0, 0);
+    height: 380px;
+    color: black;
+    -webkit-text-stroke: gold 1px;
 }
 .name {
     z-index: 10;
-    border: 2px inset orange;
+    border-bottom: 2px solid orange;
     text-align: center;
     position: relative;
-    top: 100%;
+    top: 85%;
+}
+.photo-project .p-overlay .name i {
+    color: red;
 }
 .p-photo {
     height: 400px;
@@ -290,10 +299,9 @@ body #nav .noclick {
 
 
             /* Media Queries */
-@media only screen and (max-width: 1300px) {
-    .interact-1 {
-        top: 110%;
-        width: 200%;
+@media only screen and (max-width: 1200px) {
+    #projects {
+        height: 150%;
     }
 }
 
@@ -334,25 +342,19 @@ body #nav .noclick {
         left: 5%;
     }
     .interact-1 {
-        top: 250%;
-        visibility: hidden;
-        font-size: 90%;
-        height: 150%;
+        font-size: 120%;
         padding: 15px;
         left: -5px;
         right: 0;
     }
     .language {
-        padding-bottom: 25%;
+        border: 5px inset;
     }
     #contact-section {
         border: 0px;
     }
-    #selfie {
-        width: 60%;
-    }
 }
-@media only screen and (min-width: 501px) and (max-width: 1200px) {
+@media only screen and (min-width: 501px) and (max-width: 1300px) {
     .job h1 {
             font-size: 25px;
         }
@@ -373,11 +375,8 @@ body #nav .noclick {
         .interact-1 {
             visibility: hidden;
         }
-        .language {
-            visibility: hidden;
-        }
         #selfie {
-            width: 40%;
+            width: 30%;
         }
 }
 @keyframes fade {
