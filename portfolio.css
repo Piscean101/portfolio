@@ -152,7 +152,7 @@ body #nav .noclick {
     padding: 10px;
     z-index: 2;
     border: 12px inset rgba(0, 0, 0, 0.80);
-    background-image: url('/firstport/logos/stack.jpg');
+    background-image: url('./logos/stack.jpg');
     background-position: center;
     background-size: cover;
 }
