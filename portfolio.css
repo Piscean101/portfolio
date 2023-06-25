@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(255, 238, 203, 0.214);
+    background-color: rgb(105, 47, 0);
     margin: 0px;
     padding: 0px;
     overflow-y: auto;
@@ -79,7 +79,7 @@ body #nav .noclick {
             /* Home Page */
 
 .job {
-    background-color: rgb(255, 203, 234);
+    background-image: linear-gradient(to top, rgb(110, 31, 44), rgb(255, 97, 123), rgb(252, 105, 208), purple);
     position: absolute;
     width: 101vw;
     height: 40%;
@@ -92,10 +92,18 @@ body #nav .noclick {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:rgb(94, 42, 0)
 }
+
 #selfie {
+    border-radius: 50%;
+    background-image: url('../firstport/facepic.jpg');
+    background-position: -6px;
+    background-size:cover;
+    border: 7px solid rgba(255, 255, 255, 0.50);
+    position: absolute;
     right: 5%;
     top: 35%;
-    position: absolute;
+    height: 45%;
+    width: 25%;
 }
 #location {
     font-size: 10px; 
@@ -111,33 +119,36 @@ body #nav .noclick {
     z-index: 5;
 }
 #interact.fade {
-    animation: fade 2500ms forwards;
+    animation: fade 3999ms forwards;
 }
 .interact-1 {
-    background-color: '';
-    position: absolute;
     bottom: 100px;
     z-index: 1;
     padding: 10px;
-    box-shadow: rgba(255, 203, 234, 0.773) 0px 0px 80px 35px inset;
-    border: 2px solid rgb(255, 203, 234);
+    /*box-shadow: rgba(255, 203, 234, 0.773) 0px 0px 80px 35px inset;*/
     font-size: 25px;
     margin: 15px;
     position: relative;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     height: auto;
     padding: 20px;
     border-radius: 5px;
     display: flex;
+    color: rgba(255, 203, 234, 0.773);
+    -webkit-text-stroke: 1px white;
 }
 .interact-1 a{
     text-decoration-line: none;
     color: brown;
 }
+.interact-1 #smiley {
+    position: relative;
+    top: 15px;
+    opacity: 0.4;
+}
 
 .language {
-    background-color: '';
     position: relative;
     top: 15%;
     width: 120%;
@@ -151,18 +162,10 @@ body #nav .noclick {
     overflow: hidden;
     padding: 10px;
     z-index: 2;
-    border: 12px inset rgba(0, 0, 0, 0.80);
+    border-top: 25px inset rgba(0, 0, 0, 0.15);
     background-image: url('./logos/stack.jpg');
     background-position: center;
     background-size: cover;
-}
-#language-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(37, 37, 37, 0.3);
-    z-index: 3;
-    height: 100%;
-    width: 100%;
 }
 .language h2{
     position: absolute;
@@ -196,9 +199,12 @@ body #nav .noclick {
 }
 .photo-project {
     position: relative;
-    margin: 2px;
+    margin: 50px;
     padding: none;
     box-sizing: border-box;
+}
+.photo-project .p-overlay .name i {
+    color: red;
 }
 #projects {
     position: absolute;
@@ -207,10 +213,13 @@ body #nav .noclick {
     inset: 0;
     z-index: 2;
     padding: 50px;
+    display: flex;
+    justify-content: center;
 }
 #projects::after {
     content: '';
     background-color:rgb(105, 47, 0);
+    border-top: 15px double white;
     z-index: -1;
     inset: 0;
     transform: skewY(5deg);
@@ -222,8 +231,14 @@ body #nav .noclick {
     color: white;
     position: absolute;
     top: 150%;
-    width: 100%;
     height: 150%;
+    right: 0;
+    left: 0;
+}
+#projects-title {
+    position: absolute;
+    top: 0;
+    left: 5%;
 }
 .p-overlay p {
     color: rgb(255, 255, 0);
@@ -231,9 +246,14 @@ body #nav .noclick {
 #image-wrap {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     overflow: hidden;
+    position: relative;
+    width: 75%;
+    height: 50%;
+    top: 15%;
+    overflow-x: scroll;
 }
 .p-overlay {
     background-color: rgba(0, 0, 0, 0.80);
@@ -258,9 +278,7 @@ body #nav .noclick {
     position: relative;
     top: 85%;
 }
-.photo-project .p-overlay .name i {
-    color: red;
-}
+
 
 
 
@@ -325,8 +343,12 @@ body #nav .noclick {
         display: none;
     }
 }
-
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 1120px) and (max-width: 1199px) {
+    .language {
+        top: 40%;
+    }
+}
+@media only screen and (max-width: 600px) {
     #image-wrap {
         justify-content: center;
     }
@@ -334,7 +356,7 @@ body #nav .noclick {
         padding: 5px;
     }
     .p-photo {
-        width: 300px;
+        width: 425px;
         height: 350px;
     }
     .p-overlay {
@@ -369,16 +391,16 @@ body #nav .noclick {
         right: 0;
     }
     .language {
-        border: 5px inset;
+        visibility: hidden;
     }
     #contact-section {
         border: 0px;
     }
     #selfie {
-        width: 50%;
+        width: 65%;
     }
 }
-@media only screen and (min-width: 501px) and (max-width: 1300px) {
+@media only screen and (min-width: 501px) and (max-width: 1200px) {
     .job h1 {
             font-size: 25px;
         }
@@ -400,7 +422,7 @@ body #nav .noclick {
             visibility: hidden;
         }
         #selfie {
-            width: 30%;
+            width: 40%;
         }
 }
 @keyframes fade {
