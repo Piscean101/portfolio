@@ -95,7 +95,7 @@ body #nav .noclick {
 
 #selfie {
     border-radius: 50%;
-    background-image: url('../firstport/facepic.jpg');
+    background-image: url('./facepic.jpg');
     background-position: -6px;
     background-size:cover;
     border: 7px solid rgba(255, 255, 255, 0.50);
@@ -222,7 +222,7 @@ body #nav .noclick {
     border-top: 15px double white;
     z-index: -1;
     inset: 0;
-    transform: skewY(5deg);
+    transform: skewY(8deg);
     position: absolute;
 }
 #project-wrap {
